@@ -1,11 +1,15 @@
 .appContainer {
-    display: flex;
-    height: 100vh;
-  }
-  
-  .mainContent {
-    flex: 1;
-    padding: 20px;
-    background-color: #fafafa;
-    color: black;
-  }
+  display: flex;
+  height: 100vh; 
+  width: 100vw;
+}
+
+.navbar {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.chatContainer {
+  flex: 1;
+  display: flex;
+}

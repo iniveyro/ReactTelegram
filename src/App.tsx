@@ -1,13 +1,18 @@
-import { Navbar } from './components/navbar/navbar';
+import { Navbar } from './components/Navbar/Navbar';
 import styles from './App.module.css';
+import { ChatWindow } from './components/ChatWindow/ChatWindow';
+import { mockChats } from './data/chats.mock';
+import { mockMensajesJuan } from './data/messages.mock';
 
 function App() {
   return (
     <div className={styles.appContainer}>
       <Navbar />
-      <main className={styles.mainContent}>
-        <h1>Contenido principal aquí</h1>
-      </main>
+      <ChatWindow 
+        contactName={mockChats[0].nombre} 
+        contactAvatar={mockChats[0].avatar} 
+        messages={mockMensajesJuan} 
+      />
     </div>
   );
 }
