@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+    width: 100%;
+    position: relative;
     background-color: #e5ddd5;
     border-left: 1px solid #ddd;
     flex: 1;
@@ -24,6 +26,7 @@
   
   .messagesContainer {
     flex: 1;
+    scrollbar-width: none;
     padding: 16px;
     overflow-y: auto;
     background-color: #DFD8CB;  
@@ -56,3 +59,15 @@
     display: block;
     margin-top: 4px;
   }
+
+.messageInputContainer {
+  padding: 10px;
+  background-color: #f0f2f5;
+  border-top: 1px solid #ddd;
+}
+
+.chatHeader {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}

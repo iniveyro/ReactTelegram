@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #f0f2f5;
+    border-top: 1px solid #ddd;
+    gap: 8px;
+  }
+  
+  .textInput {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    resize: none;
+    max-height: 100px;
+    font-family: inherit;
+    font-size: 14px;
+    background-color: #DFD8CB;
+  }
+  
+  .attachButton, .sendButton {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    color: #1B92D1;
+  }
+  
+  .sendButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .hiddenFileInput {
+    display: none;
+    color: #1B92D1;
+  }

@@ -6,6 +6,8 @@
     padding: 16px;
     overflow-y: auto;
     color: #111;
+    position: relative;
+    flex-shrink: 0;
   }
   
   .title {

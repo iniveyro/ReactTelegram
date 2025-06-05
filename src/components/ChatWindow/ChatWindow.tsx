@@ -3,6 +3,7 @@ import styles from './ChatWindow.module.css';
 import { mockMensajesJuan } from '../../data/messages.mock'; // Importa desde /data
 import juanAvatar from '../../assets/hombre1.png';
 import type { Mensaje } from '../../data/types';
+import { MessageInput } from '../InputMensajes/InputMensajes';
 
 interface ChatWindowProps {
   contactName: string;
@@ -15,6 +16,15 @@ export const ChatWindow: FC<ChatWindowProps> = ({
   contactAvatar = juanAvatar,
   messages = mockMensajesJuan, // Usa el mock por defecto
 }) => {
+  const handleSendMessage = (texto: string) => {
+    const newMessage: Mensaje = {
+      idMensj: Date.now().toString(),
+      texto,
+      hora: new Date(),
+      isUser: true,
+    };
+  };
+
   return (
     <div className={styles.chatWindow}>
       <header className={styles.chatHeader}>
@@ -36,6 +46,7 @@ export const ChatWindow: FC<ChatWindowProps> = ({
           </div>
         ))}
       </div>
+      <MessageInput onSendMessage={handleSendMessage} />
     </div>
   );
 };
