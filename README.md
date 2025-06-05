@@ -1,5 +1,11 @@
 # ReactTelegram
 
+## Cómo ejecutar este proyecto
+
+### Requisitos previos
+- Node.js (v18+ recomendado)
+- **pnpm** instalado globalmente
+
 ## Proyecto para el curso de React del Informatorio, es una reinterpretacion de la interfaz de Telegram.
 - Lista de chats.
 - Card con nombre, foto, último mensaje
