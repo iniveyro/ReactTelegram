@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react';
 import type { FC } from 'react';
 import styles from './InputMensajes.module.css'
+import telegramSend from '../../assets/telegramsend.svg';
+import telegramClip from '../../assets/telegramclip.svg';
 
 interface MessageInputProps {
   onSendMessage: (text: string) => void;
@@ -37,13 +39,17 @@ export const MessageInput: FC<MessageInputProps> = ({ onSendMessage }) => {
 
   return (
     <div className={styles.container}>
-      {/* Botón adjuntar (clip) */}
+      {/* Botón adjuntar con SVG */}
       <button 
         className={styles.attachButton} 
         onClick={handleAttachClick}
         aria-label="Adjuntar archivo"
       >
-        📎
+        <img 
+          src={telegramClip} 
+          alt="Adjuntar" 
+          className={styles.icon}
+        />
       </button>
 
       {/* Input oculto para archivos */}
@@ -64,13 +70,18 @@ export const MessageInput: FC<MessageInputProps> = ({ onSendMessage }) => {
         rows={1}
       />
 
-      {/* Botón enviar */}
+      {/* Botón enviar con SVG */}
       <button 
         className={styles.sendButton} 
         onClick={handleSend}
         disabled={!message.trim()}
+        aria-label="Enviar mensaje"
       >
-        ➤
+        <img 
+          src={telegramSend} 
+          alt="Enviar" 
+          className={styles.sendIcon} 
+        />
       </button>
     </div>
   );

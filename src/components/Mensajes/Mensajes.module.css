@@ -1,0 +1,27 @@
+.message {
+    max-width: 70%;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    word-break: break-word;
+  }
+  
+  .userMessage {
+    background-color: #37AFE2;
+    color: white;
+    margin-left: auto;
+  }
+  
+  .contactMessage {
+    background-color: white;
+    margin-right: auto;
+    color: #1B92D1;
+  }
+  
+  .timestamp {
+    font-size: 11px;
+    display: block;
+    text-align: right;
+    margin-top: 4px;
+    opacity: 0.8;
+  }

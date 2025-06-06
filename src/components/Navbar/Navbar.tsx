@@ -1,10 +1,21 @@
 import type { FC } from 'react';
+import { Container } from '../Container/Container';
 import styles from './Navbar.module.css';
-import { mockChats } from '../../data/chats.mock'; // Importa desde /data
+import { mockChats } from '../../data/chats.mock';
+import telegramLogo from '../../assets/telegramlogo.svg';
 
 export const Navbar: FC = () => {
   return (
-    <nav className={styles.navbar}>
+    <Container className={styles.navbar}>
+      {/* Encabezado con logo y texto */}
+      <div className={styles.header}>
+        <img 
+          src={telegramLogo} 
+          alt="Telegram Logo" 
+          className={styles.logo} 
+        />
+        <h1 className={styles.appTitle}>Telegram</h1>
+      </div>
       <h2>Chats</h2>
       <ul className={styles.chatList}>
         {mockChats.map((chat) => (
@@ -20,6 +31,6 @@ export const Navbar: FC = () => {
           </li>
         ))}
       </ul>
-    </nav>
+    </Container>
   );
 };

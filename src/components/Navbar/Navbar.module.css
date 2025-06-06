@@ -10,6 +10,27 @@
     flex-shrink: 0;
   }
   
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  gap: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+}
+
+.appTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #0088cc;
+}
+
   .title {
     font-size: 20px;
     margin-bottom: 20px;
