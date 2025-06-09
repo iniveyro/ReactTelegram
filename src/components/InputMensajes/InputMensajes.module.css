@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f0f2f5;
+    border-top: 1px solid #ddd;
+    gap: 8px;
+  }
+  
+  .textInput {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    resize: none;
+    max-height: 100px;
+    font-family: inherit;
+    font-size: 14px;
+    background-color: #DFD8CB;
+    color: black;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  
+  .attachButton, .sendButton {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    color: #1B92D1;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+  }
+  
+  .sendIcon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s;
+  }
+
+  .attachButton:hover, .sendButton:not(:disabled):hover {
+    background-color: rgba(0,0,0,0.05);
+  }
+
+  .sendButton:not(:disabled):hover .sendIcon {
+    transform: scale(1.1);
+  }
+
+  .sendButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }  
+
+  .hiddenFileInput {
+    display: none;
+    color: #1B92D1;
+  }
