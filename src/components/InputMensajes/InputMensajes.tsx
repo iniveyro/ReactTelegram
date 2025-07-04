@@ -1,6 +1,6 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import type { FC } from 'react';
-import styles from './InputMensajes.module.css'
+import styles from './InputMensajes.module.css';
 import telegramSend from '../../assets/telegramsend.svg';
 import telegramClip from '../../assets/telegramclip.svg';
 
@@ -11,13 +11,21 @@ interface MessageInputProps {
 export const MessageInput: FC<MessageInputProps> = ({ onSendMessage }) => {
   const [message, setMessage] = useState('');
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const handleSend = () => {
     if (message.trim()) {
+      alert(`Mensaje a enviar: "${message}"`);
       onSendMessage(message);
       setMessage('');
     }
   };
+
+  useEffect(() => {
+    if (message === '' && textareaRef.current) {
+      textareaRef.current.focus();
+    }
+  }, [message]);
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -39,7 +47,6 @@ export const MessageInput: FC<MessageInputProps> = ({ onSendMessage }) => {
 
   return (
     <div className={styles.container}>
-      {/* Botón adjuntar con SVG */}
       <button 
         className={styles.attachButton} 
         onClick={handleAttachClick}
@@ -51,17 +58,14 @@ export const MessageInput: FC<MessageInputProps> = ({ onSendMessage }) => {
           className={styles.icon}
         />
       </button>
-
-      {/* Input oculto para archivos */}
       <input
         type="file"
         ref={fileInputRef}
         onChange={handleFileChange}
         className={styles.hiddenFileInput}
       />
-
-      {/* Campo de texto */}
       <textarea
+        ref={textareaRef}
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         onKeyDown={handleKeyPress}
@@ -70,7 +74,6 @@ export const MessageInput: FC<MessageInputProps> = ({ onSendMessage }) => {
         rows={1}
       />
 
-      {/* Botón enviar con SVG */}
       <button 
         className={styles.sendButton} 
         onClick={handleSend}

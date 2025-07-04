@@ -90,5 +90,104 @@ export const mockMensajesJuan: Mensaje[] = [
       texto: 'Joya, pasame el alias para realizar la seña. :)',
       hora: new Date(Date.now() - 3000000),
       isUser: false,
+    },
+    {
+      idMensj: '16',
+      texto: 'Ahi te lo paso',
+      hora: new Date(Date.now() - 3000000),
+      isUser: true,
+    },
+  ];
+
+  export const mockMensajesCarlos: Mensaje[] = [
+    {
+      idMensj: '1',
+      texto: 'Hola',
+      hora: new Date(Date.now() - 3600000),
+      isUser: false,
+    },
+    {
+      idMensj: '2',
+      texto: ' ¿Cómo estás?',
+      hora: new Date(Date.now() - 3000000),
+      isUser: true,
+    },
+    {
+      idMensj: '3',
+      texto: 'Bien y tu?',
+      hora: new Date(Date.now() - 3000000),
+      isUser: true,
+    },
+    {
+      idMensj: '4',
+      texto: 'Yo bien',
+      hora: new Date(Date.now() - 3000000),
+      isUser: false,
+    }
+  ];
+
+  export const mockMensajesAna: Mensaje[] = [
+    {
+      idMensj: '1',
+      texto: 'Hola',
+      hora: new Date(Date.now() - 3600000),
+      isUser: false,
+    },
+    {
+      idMensj: '2',
+      texto: 'Hola abuela',
+      hora: new Date(Date.now() - 3000000),
+      isUser: true,
+    },
+    {
+      idMensj: '3',
+      texto: 'Como estas?',
+      hora: new Date(Date.now() - 3000000),
+      isUser: true,
+    },
+    {
+      idMensj: '4',
+      texto: 'Yo bien',
+      hora: new Date(Date.now() - 3000000),
+      isUser: false,
+    },
+    {
+      idMensj: '5',
+      texto: 'Venis hoy a comer?',
+      hora: new Date(Date.now() - 3000000),
+      isUser: false,
+    }
+  ];
+
+  export const mockMensajesSofia: Mensaje[] = [
+    {
+      idMensj: '1',
+      texto: 'Hola',
+      hora: new Date(Date.now() - 3600000),
+      isUser: false,
+    },
+    {
+      idMensj: '2',
+      texto: ' ¿Cómo estás?',
+      hora: new Date(Date.now() - 3000000),
+      isUser: true,
+    },
+    {
+      idMensj: '3',
+      texto: 'Bien y tu?',
+      hora: new Date(Date.now() - 3000000),
+      isUser: true,
+    },
+    {
+      idMensj: '4',
+      texto: 'Yo bien',
+      hora: new Date(Date.now() - 3000000),
+      isUser: false,
+    },
+    {
+      idMensj: '5',
+      texto: 'Geniaal',
+      hora: new Date(Date.now() - 3000000),
+      isUser: true,
     }
   ];

@@ -1,0 +1,75 @@
+.searchContainer {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 8px 16px;
+    margin: 12px 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .searchContainer:focus-within {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.5;
+    margin-right: 10px;
+  }
+  
+  .input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+    color: #333;
+    padding: 6px 0;
+  }
+  
+  .input::placeholder {
+    color: #999;
+    font-weight: 400;
+  }
+  
+  .input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23999"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>') no-repeat;
+    cursor: pointer;
+  }
+  
+  .dark .searchContainer {
+    background-color: #1e1e1e;
+  }
+  
+  .dark .input {
+    color: #e1e1e1;
+  }
+  
+  .dark .input::placeholder {
+    color: #888;
+  }
+
+  .clearButton {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 4px;
+    margin-left: 8px;
+    transition: color 0.2s;
+  }
+  
+  .clearButton:hover {
+    color: #333;
+  }
+  
+  .dark .clearButton:hover {
+    color: #fff;
+  }

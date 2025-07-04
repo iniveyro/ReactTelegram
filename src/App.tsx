@@ -1,20 +1,21 @@
 import { Navbar } from './components/Navbar/Navbar';
 import styles from './App.module.css';
 import { ChatWindow } from './components/ChatWindow/ChatWindow';
-import { mockChats } from './data/chats.mock';
-import { mockMensajesJuan } from './data/messages.mock';
+import type { Chat } from './data/types';
+import { useState } from 'react';
 
-function App() {
+export const App = () => {
+  const [selectedChat, setSelectedChat] = useState<Chat | null>(null);
+
   return (
     <div className={styles.appContainer}>
-      <Navbar />
-      <ChatWindow 
-        contactName={mockChats[0].nombre} 
-        contactAvatar={mockChats[0].avatar} 
-        messages={mockMensajesJuan} 
+      <Navbar 
+        onChatSelect={setSelectedChat}
+        selectedChatId={selectedChat?.idChat}
       />
+      <ChatWindow chat={selectedChat} />
     </div>
   );
-}
+};
 
 export default App;

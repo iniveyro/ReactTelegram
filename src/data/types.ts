@@ -4,11 +4,12 @@ export interface Chat {
   ultimoMsj: string;
   sinLeer: number;
   avatar: string;
+  mensajes: Mensaje[]
 }
 
 export interface Mensaje {
-    idMensj: string;
-    texto: string;
-    hora: Date;
-    isUser: boolean;
+  idMensj: string;
+  texto: string;
+  hora: Date;
+  isUser: boolean;
 }
