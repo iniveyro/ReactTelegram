@@ -98,3 +98,29 @@
     font-size: 12px;
     flex-shrink: 0;
   }
+
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 10px;
+    border-bottom: 1px solid #e1e1e1;
+    position: relative; /* Para posicionar el botón */
+  }
+  
+  .settingsButton {
+    margin-left: auto; /* Lo empuja a la derecha */
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+  }
+  
+  .settingsButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .settingsIcon {
+    width: 24px;
+    height: 24px;
+    filter: invert(40%) sepia(8%) saturate(1273%) hue-rotate(169deg) brightness(94%) contrast(86%);
+  }

@@ -1,21 +1,28 @@
+import { Route, Routes } from 'react-router-dom';
+import { Home } from './pages/Home/Home';
+import { Chat } from './pages/Chat/Chat';
+import { Settings } from './pages/Settings/Settings';
+import { NotFound } from './pages/NotFound/NotFound';
 import { Navbar } from './components/Navbar/Navbar';
 import styles from './App.module.css';
-import { ChatWindow } from './components/ChatWindow/ChatWindow';
-import type { Chat } from './data/types';
-import { useState } from 'react';
 
-export const App = () => {
-  const [selectedChat, setSelectedChat] = useState<Chat | null>(null);
-
+function App() {
   return (
     <div className={styles.appContainer}>
-      <Navbar 
-        onChatSelect={setSelectedChat}
-        selectedChatId={selectedChat?.idChat}
-      />
-      <ChatWindow chat={selectedChat} />
+      <div className={styles.navbarContainer}>
+        <Navbar />
+      </div>
+      
+      <div className={styles.contentContainer}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/chat/:id" element={<Chat />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
     </div>
   );
-};
+}
 
 export default App;
